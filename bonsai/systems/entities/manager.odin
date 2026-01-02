@@ -137,11 +137,10 @@ drawEntityDefault :: proc(e: ^Entity) {
 		return
 	}
 
-	xForm := gmath.xFormRotate(e.rotation)
-
 	drawSpriteEntity(
 		e,
 		e.position,
+		e.rotation,
 		e.sprite,
 		xForm = xForm,
 		animIndex = e.animationIndex,
@@ -155,6 +154,7 @@ drawEntityDefault :: proc(e: ^Entity) {
 drawSpriteEntity :: proc(
 	entity: ^Entity,
 	position: gmath.Vec2,
+	rotation: f32 = 0.0,
 	sprite: game.SpriteName,
 	pivot := gmath.Pivot.centerCenter,
 	flipX := false,
@@ -183,6 +183,7 @@ drawSpriteEntity :: proc(
 	render.drawSprite(
 		position,
 		sprite,
+		rotation,
 		pivot,
 		flipX,
 		drawOffset,
