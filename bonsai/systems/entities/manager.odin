@@ -142,7 +142,6 @@ drawEntityDefault :: proc(e: ^Entity) {
 		e.position,
 		e.rotation,
 		e.sprite,
-		xForm = xForm,
 		animIndex = e.animationIndex,
 		drawOffset = e.drawOffset,
 		flipX = e.flipX,
