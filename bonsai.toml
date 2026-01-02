@@ -1,0 +1,8 @@
+[project]
+name = "entities"
+version = "0.0.1"
+
+[build]
+web_libs = []
+
+[systems]
